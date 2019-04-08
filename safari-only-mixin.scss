@@ -1,0 +1,9 @@
+// Safari (10.1+)
+@mixin browser-compatible($browserName) {
+  @if $browserName == safari10Plus {
+    @media not all and (min-resolution: 0.001dpcm) { @content; }
+  }
+  @else {
+    @warn "browser-compatible supports: safari10Plus";
+  }
+}
